@@ -14,6 +14,12 @@
 
 <body>
 
+<!-- BANNER DE APOIO NO TOPO -->
+<div class="top-banner">
+    <span>❤️ Ajude o projeto: envie um Pix para o desenvolvedor</span>
+    <a href="#support">Fazer Pix</a>
+</div>
+
 <header class="navbar">
     <div class="logo">
         <span class="logo-icon">♫</span>
@@ -300,7 +306,6 @@
                 toast.classList.remove('show');
             }, 2000);
         }).catch(() => {
-            // Fallback para navegadores antigos
             const textarea = document.createElement('textarea');
             textarea.value = pixKey;
             document.body.appendChild(textarea);
