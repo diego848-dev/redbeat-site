@@ -1,5 +1,5 @@
 /* ================================
-   REDBEAT - SITE
+    SITE - APLICATIVOS ANDROID
    ================================ */
 
 * {
@@ -11,6 +11,8 @@
 :root {
     --red: #e50914;
     --red-dark: #a80710;
+    --cane: #87bd45;
+    --cane-dark: #608d2b;
     --black: #080808;
     --black-soft: #111111;
     --gray: #a5a5a5;
@@ -137,6 +139,89 @@ nav a:hover {
     color: var(--red);
 }
 
+.app-download-banner {
+    display: grid;
+    max-width: 1600px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin: 0 auto;
+    padding: 18px 7%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    background: linear-gradient(110deg, #101010, #151515 52%, #101010);
+}
+
+.quick-app-download {
+    --banner-accent: var(--red);
+    display: grid;
+    min-width: 0;
+    min-height: 96px;
+    grid-template-columns: 64px minmax(0, 1fr) 42px;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 18px;
+    border: 1px solid color-mix(in srgb, var(--banner-accent) 40%, transparent);
+    border-radius: 12px;
+    background: linear-gradient(115deg, color-mix(in srgb, var(--banner-accent) 12%, #141414), #171717 75%);
+    color: var(--white);
+    text-decoration: none;
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.blocker-quick-download {
+    --banner-accent: var(--cane);
+}
+
+.quick-app-download:hover {
+    transform: translateY(-2px);
+    border-color: var(--banner-accent);
+    box-shadow: 0 12px 28px color-mix(in srgb, var(--banner-accent) 16%, transparent);
+}
+
+.quick-app-download:focus-visible {
+    outline: 3px solid var(--banner-accent);
+    outline-offset: 3px;
+}
+
+.quick-app-download img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.quick-app-copy {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.quick-app-copy strong {
+    overflow-wrap: anywhere;
+    font-size: 1.02rem;
+    line-height: 1.25;
+}
+
+.quick-app-copy small {
+    margin-top: 5px;
+    color: var(--gray);
+    font-size: 0.82rem;
+}
+
+.quick-app-action {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--banner-accent);
+    color: #101010;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
 .nav-button {
     background: var(--red);
     color: var(--white);
@@ -168,6 +253,324 @@ nav a:hover {
     gap: 60px;
     position: relative;
     overflow: hidden;
+}
+
+.app-store {
+    min-height: 0;
+    padding: 82px 7% 92px;
+    background: #0d0d0d;
+}
+
+.app-store-heading {
+    max-width: 780px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.app-store-heading > span {
+    color: var(--red);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.app-store-heading h1 {
+    margin: 12px 0;
+    font-size: 3.8rem;
+    line-height: 1;
+}
+
+.app-store-heading p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--gray);
+    font-size: 1.05rem;
+}
+
+.app-picker {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 28px;
+}
+
+.app-tab {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: border-color var(--transition), background var(--transition);
+}
+
+.app-tab:hover,
+.app-tab:focus-visible {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: #202020;
+}
+
+.app-tab.player-tab {
+    border-color: rgba(229, 9, 20, 0.5);
+}
+
+.app-tab.blocker-tab {
+    border-color: rgba(135, 189, 69, 0.5);
+}
+
+.app-catalog {
+    display: grid;
+    max-width: 1500px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+    margin: 0 auto;
+}
+
+.app-card {
+    --app-accent: var(--red);
+    --app-accent-dark: var(--red-dark);
+    display: grid;
+    min-width: 0;
+    min-height: 650px;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    align-items: center;
+    gap: 18px;
+    overflow: hidden;
+    padding: 30px;
+    border: 1px solid rgba(229, 9, 20, 0.35);
+    border-top: 3px solid var(--app-accent);
+    border-radius: 16px;
+    background: linear-gradient(150deg, #191313 0%, #151515 45%, #111 100%);
+    scroll-snap-align: start;
+}
+
+.blocker-card {
+    --app-accent: var(--cane);
+    --app-accent-dark: var(--cane-dark);
+    border-color: rgba(135, 189, 69, 0.35);
+    border-top-color: var(--cane);
+    background: linear-gradient(150deg, #151b12 0%, #151515 48%, #141111 100%);
+}
+
+.app-card-content {
+    min-width: 0;
+}
+
+.app-card .badge {
+    margin-bottom: 16px;
+    border-color: color-mix(in srgb, var(--app-accent) 40%, transparent);
+    background: color-mix(in srgb, var(--app-accent) 11%, transparent);
+    color: var(--app-accent);
+}
+
+.app-card .badge span {
+    background: var(--app-accent);
+}
+
+.app-card h2 {
+    margin-bottom: 12px;
+    font-size: 2.15rem;
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+}
+
+.app-card-content > p {
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.app-highlights {
+    display: grid;
+    gap: 9px;
+    margin: 20px 0 24px;
+    padding: 0;
+    color: #dedede;
+    font-size: 0.92rem;
+    list-style: none;
+}
+
+.app-highlights li::before {
+    margin-right: 10px;
+    color: var(--app-accent);
+    content: "+";
+    font-weight: 800;
+}
+
+.app-card-actions {
+    display: grid;
+    gap: 10px;
+}
+
+.app-card-actions .download-button {
+    width: 100%;
+    min-height: 54px;
+    padding: 13px 16px;
+    background: var(--app-accent);
+    box-shadow: 0 10px 26px color-mix(in srgb, var(--app-accent) 25%, transparent);
+    text-align: center;
+}
+
+.blocker-card .download-button {
+    color: #10150b;
+}
+
+.app-card-actions .download-button:hover {
+    background: var(--app-accent-dark);
+}
+
+.app-card-actions .secondary-button {
+    min-height: 46px;
+}
+
+.app-card-actions .secondary-button:hover {
+    border-color: var(--app-accent);
+    color: var(--app-accent);
+}
+
+.app-card .phone-area {
+    min-height: 420px;
+    margin-top: 0;
+}
+
+.app-card .phone {
+    width: 200px;
+    height: 400px;
+}
+
+.player-card .glow {
+    background: radial-gradient(circle, rgba(229, 9, 20, 0.28), transparent 70%);
+}
+
+.blocker-art {
+    min-height: 360px;
+}
+
+.blocker-panel {
+    width: min(100%, 320px);
+    padding: 20px;
+    border: 1px solid rgba(135, 189, 69, 0.35);
+    border-radius: 16px;
+    background: linear-gradient(145deg, #172017, #101310 74%);
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.42), 0 0 40px rgba(135, 189, 69, 0.12);
+    animation: blockerFloat 5s ease-in-out infinite;
+}
+
+.blocker-heading,
+.blocker-protection,
+.blocker-rule,
+.blocker-notice {
+    display: flex;
+    align-items: center;
+}
+
+.blocker-heading {
+    gap: 12px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.blocker-mark,
+.blocker-rule-icon,
+.blocker-notice-icon {
+    display: grid;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 12px;
+    color: var(--cane);
+    background: rgba(135, 189, 69, 0.13);
+    font-size: 1.3rem;
+}
+
+.blocker-heading div,
+.blocker-protection div,
+.blocker-rule div,
+.blocker-notice div {
+    display: flex;
+    flex-direction: column;
+}
+
+.blocker-heading div span {
+    color: var(--cane);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+}
+
+.blocker-heading div strong {
+    font-size: 1.2rem;
+}
+
+.blocker-menu {
+    margin-left: auto;
+    color: var(--gray);
+}
+
+.blocker-protection {
+    justify-content: space-between;
+    gap: 12px;
+    margin: 22px 0;
+    padding: 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.blocker-protection div span,
+.blocker-rule div span,
+.blocker-notice div span {
+    color: var(--gray);
+    font-size: 0.78rem;
+}
+
+.blocker-switch {
+    flex: 0 0 46px;
+    width: 46px;
+    height: 26px;
+    padding: 3px;
+    border-radius: 99px;
+    background: var(--cane);
+}
+
+.blocker-switch span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    border-radius: 50%;
+    background: white;
+}
+
+.blocker-rule,
+.blocker-notice {
+    gap: 13px;
+    padding: 13px 2px;
+}
+
+.blocker-notice {
+    margin-top: 8px;
+    padding: 16px;
+    border: 1px solid rgba(229, 9, 20, 0.22);
+    border-radius: 12px;
+    background: rgba(229, 9, 20, 0.07);
+}
+
+.blocker-notice-icon {
+    color: #ff626b;
+    background: rgba(229, 9, 20, 0.14);
+}
+
+.blocker-footer {
+    padding-top: 20px;
+    color: var(--gray);
+    font-size: 0.78rem;
+    text-align: center;
 }
 
 .hero::before {
@@ -480,6 +883,11 @@ nav a:hover {
     50% { transform: rotate(-3deg) translateY(-10px); }
 }
 
+@keyframes blockerFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
 @keyframes glowPulse {
     0%, 100% { box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
     50% { box-shadow: 0 20px 50px rgba(229,9,20,0.5); }
@@ -563,6 +971,19 @@ section {
 .feature-card p {
     color: var(--gray);
     font-size: 0.95rem;
+}
+
+.blocker-details {
+    background: linear-gradient(115deg, #111711, #111111 58%, #171111);
+}
+
+.blocker-details .section-title span,
+.blocker-feature-grid .feature-icon {
+    color: var(--cane);
+}
+
+.blocker-feature-grid .feature-card:hover {
+    border-color: rgba(135, 189, 69, 0.48);
 }
 
 /* ================================
@@ -721,6 +1142,30 @@ section {
     font-size: 1.1rem;
     box-shadow: 0 15px 35px rgba(229,9,20,0.4);
     transition: var(--transition);
+}
+
+.download-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    position: relative;
+}
+
+.download-options .download-main {
+    min-height: 58px;
+}
+
+.download-main.blocker-download {
+    background: var(--cane);
+    color: #10150b;
+    box-shadow: 0 15px 35px rgba(135, 189, 69, 0.28);
+}
+
+.download-main.blocker-download:hover {
+    background: var(--cane-dark);
+    color: white;
+    box-shadow: 0 20px 45px rgba(135, 189, 69, 0.4);
 }
 
 .download-main:hover {
@@ -938,6 +1383,17 @@ footer .copyright {
    RESPONSIVE
    ================================ */
 
+@media (max-width: 1100px) {
+    .app-card {
+        min-height: 760px;
+        grid-template-columns: 1fr;
+    }
+
+    .app-card .phone-area {
+        min-height: 440px;
+    }
+}
+
 @media (max-width: 900px) {
     .feature-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -953,6 +1409,34 @@ footer .copyright {
         padding: 18px 5%;
     }
 
+    .app-download-banner {
+        grid-template-columns: 1fr;
+        gap: 9px;
+        padding: 12px 5%;
+    }
+
+    .quick-app-download {
+        min-height: 82px;
+        grid-template-columns: 56px minmax(0, 1fr) 38px;
+        gap: 12px;
+        padding: 10px 12px;
+    }
+
+    .quick-app-download img {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+    }
+
+    .quick-app-action {
+        width: 38px;
+        height: 38px;
+    }
+
+    .quick-app-copy small {
+        font-size: 0.76rem;
+    }
+
     nav {
         display: none;
     }
@@ -962,6 +1446,58 @@ footer .copyright {
         padding: 70px 5%;
         flex-direction: column;
         text-align: center;
+    }
+
+    .app-store {
+        padding: 60px 5% 72px;
+    }
+
+    .app-store-heading h1 {
+        font-size: 2.8rem;
+    }
+
+    .app-picker {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .app-tab {
+        padding: 0 14px;
+        font-size: 0.82rem;
+    }
+
+    .app-catalog {
+        display: flex;
+        gap: 14px;
+        margin-right: -4vw;
+        padding: 0 4vw 16px 0;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scrollbar-color: #555 transparent;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .app-card {
+        display: flex;
+        flex: 0 0 min(88vw, 480px);
+        min-height: 0;
+        flex-direction: column;
+        padding: 24px;
+    }
+
+    .app-card .phone-area {
+        min-height: 440px;
+    }
+
+    .app-card .phone {
+        width: 220px;
+        height: 440px;
+    }
+
+    .blocker-art {
+        min-height: 340px;
     }
 
     .hero-content {
@@ -1009,9 +1545,48 @@ footer .copyright {
         padding: 40px 20px;
     }
 
+    .download-options {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .download-options .download-main {
+        width: 100%;
+        padding: 15px 18px;
+        font-size: 1rem;
+    }
+
     .pix-key-container {
         flex-direction: column;
         gap: 15px;
+    }
+}
+
+@media (max-width: 420px) {
+    .app-store-heading h1 {
+        font-size: 2.4rem;
+    }
+
+    .app-card {
+        padding: 20px;
+    }
+
+    .app-card h2 {
+        font-size: 1.9rem;
+    }
+
+    .app-card .phone {
+        width: 210px;
+        height: 420px;
+    }
+
+    .blocker-panel {
+        padding: 18px;
+        animation-name: blockerFloat;
+    }
+
+    .blocker-protection {
+        padding: 14px 12px;
     }
 }
 

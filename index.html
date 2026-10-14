@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Music Player — Seu som. Seu ritmo.</title>
+        <title>Music Player e Bloqueador de Chamadas para Android</title>
 
     <meta name="description"
-          content="Music Player — um player de música moderno, rápido e elegante para Android. Baixe músicas grátis com o bot do Telegram e reproduza no app.">
+              content="Conheça os apps Music Player e Bloqueador de Chamadas para Android. Ouça suas músicas, organize playlists e controle chamadas de números fora dos contatos.">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,105 +23,164 @@
 <header class="navbar">
     <div class="logo">
         <span class="logo-icon">♫</span>
-        <span>Music Player</span>
+        <span>Apps Android</span>
     </div>
 
     <nav>
+        <a href="#apps">Aplicativos</a>
         <a href="#features">Recursos</a>
         <a href="#how-to">Como baixar</a>
-        <a href="#download">Baixar APK</a>
         <a href="#support">Apoiar</a>
     </nav>
 
     <a href="#download" class="nav-button">Baixar APK</a>
 </header>
 
+<section class="app-download-banner" aria-label="Baixe os aplicativos para Android">
+    <a class="quick-app-download player-quick-download" href="apk/player.apk" download>
+        <img src="assets/player-icon.webp" alt="" width="64" height="64">
+        <span class="quick-app-copy">
+            <strong>Music Player</strong>
+            <small>Seu som. Seu ritmo. Baixar para Android</small>
+        </span>
+        <span class="quick-app-action" aria-hidden="true">↓</span>
+    </a>
+    <a class="quick-app-download blocker-quick-download" href="apk/bloqueador.apk" download>
+        <img src="assets/call-blocker-icon.webp" alt="" width="64" height="64">
+        <span class="quick-app-copy">
+            <strong>Bloqueador de Chamadas</strong>
+            <small>Mais controle sobre chamadas. Baixar para Android</small>
+        </span>
+        <span class="quick-app-action" aria-hidden="true">↓</span>
+    </a>
+</section>
+
 <main>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="badge">
-                <span></span>
-                Disponível para Android
-            </div>
-
-            <h1>
-                Seu som.<br>
-                <strong>Seu ritmo.</strong>
-            </h1>
-
-            <p>
-                Uma experiência musical moderna, elegante e feita
-                para você ouvir suas músicas do seu jeito.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#download" class="download-button">
-                    <span>↓</span>
-                    Baixar Music Player
-                </a>
-
-                <a href="#how-to" class="secondary-button">
-                    Como baixar músicas
-                </a>
-            </div>
-
-            <div class="hero-info">
-                <div>
-                    <strong>Android</strong>
-                    <span>Plataforma</span>
-                </div>
-                <div>
-                    <strong>Grátis</strong>
-                    <span>Download</span>
-                </div>
-                <div>
-                    <strong>Music Player</strong>
-                    <span>Aplicativo</span>
-                </div>
-            </div>
+    <!-- APP CATALOG -->
+    <section id="apps" class="app-store">
+        <div class="app-store-heading">
+            <span>APLICATIVOS PARA ANDROID</span>
+            <h1>Escolha o app<br>para o seu dia.</h1>
+            <p>Do seu acervo de músicas ao controle das chamadas: conheça os dois aplicativos.</p>
         </div>
 
-        <!-- PLAYER MOCKUP -->
-        <div class="phone-area">
-            <div class="glow"></div>
-            <div class="phone">
-                <div class="phone-screen">
-                    <div class="status">
-                        <span>9:41</span>
-                        <span>● ● ●</span>
-                    </div>
-                    <div class="player-top">
-                        <span>♪</span>
-                        <span>Music Player</span>
-                        <span>•••</span>
-                    </div>
-                    <div class="album">
-                        <div class="album-art">
-                            <span>♫</span>
-                        </div>
-                    </div>
-                    <div class="song">
-                        <h3>Seu som favorito</h3>
-                        <p>Music Player</p>
-                    </div>
-                    <div class="progress">
-                        <div></div>
-                    </div>
-                    <div class="time">
-                        <span>1:24</span>
-                        <span>3:45</span>
-                    </div>
-                    <div class="controls">
-                        <span>↶</span>
-                        <span>◀</span>
-                        <button aria-label="Reproduzir">▶</button>
-                        <span>▶</span>
-                        <span>↷</span>
+        <nav class="app-picker" aria-label="Navegar pelos aplicativos">
+            <a class="app-tab player-tab" href="#player-app-card">Music Player</a>
+            <a class="app-tab blocker-tab" href="#blocker-app-card">Bloqueador de Chamadas</a>
+        </nav>
+
+        <div class="app-catalog">
+            <article class="app-card player-card" id="player-app-card" aria-labelledby="player-app-title">
+                <div class="app-card-content">
+                    <div class="badge"><span></span>PLAYER DE MÚSICA / ANDROID</div>
+                    <h2 id="player-app-title">Music Player</h2>
+                    <p>Seu som. Seu ritmo. Reproduza as músicas do seu dispositivo, favorite faixas e organize playlists.</p>
+                    <ul class="app-highlights">
+                        <li>Encontre músicas no seu dispositivo</li>
+                        <li>Favoritos sempre à mão</li>
+                        <li>Playlists para cada momento</li>
+                    </ul>
+                    <div class="app-card-actions">
+                        <a href="apk/player.apk" class="download-button" download>
+                            <span>↓</span>
+                            Baixar Music Player
+                        </a>
+                        <a href="#features" class="secondary-button">Ver recursos</a>
                     </div>
                 </div>
-            </div>
+
+                <div class="phone-area player-preview" aria-label="Prévia do Music Player">
+                    <div class="glow"></div>
+                    <div class="phone">
+                        <div class="phone-screen">
+                            <div class="status">
+                                <span>9:41</span>
+                                <span>● ● ●</span>
+                            </div>
+                            <div class="player-top">
+                                <span>♪</span>
+                                <span>Music Player</span>
+                                <span>•••</span>
+                            </div>
+                            <div class="album">
+                                <div class="album-art"><span>♫</span></div>
+                            </div>
+                            <div class="song">
+                                <h3>Seu som favorito</h3>
+                                <p>Music Player</p>
+                            </div>
+                            <div class="progress"><div></div></div>
+                            <div class="time">
+                                <span>1:24</span>
+                                <span>3:45</span>
+                            </div>
+                            <div class="controls">
+                                <span>↶</span>
+                                <span>◀</span>
+                                <button aria-label="Reproduzir">▶</button>
+                                <span>▶</span>
+                                <span>↷</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="app-card blocker-card" id="blocker-app-card" aria-labelledby="blocker-app-title">
+                <div class="app-card-content">
+                    <div class="badge"><span></span>PRIVACIDADE / ANDROID</div>
+                    <h2 id="blocker-app-title">Bloqueador de Chamadas</h2>
+                    <p>Mais controle sobre quem pode chamar. Bloqueie números que não estão salvos nos seus contatos.</p>
+                    <ul class="app-highlights">
+                        <li>Ative ou desative a proteção quando quiser</li>
+                        <li>Notificações de chamadas bloqueadas</li>
+                        <li>Consulte o histórico de bloqueios</li>
+                    </ul>
+                    <div class="app-card-actions">
+                        <a href="apk/bloqueador.apk" class="download-button" download>
+                            <span>↓</span>
+                            Baixar Bloqueador de Chamadas
+                        </a>
+                        <a href="#blocker-details" class="secondary-button">Ver recursos</a>
+                    </div>
+                </div>
+
+                <div class="phone-area blocker-art" aria-label="Prévia do Bloqueador de Chamadas">
+                    <div class="blocker-panel">
+                        <div class="blocker-heading">
+                            <span class="blocker-mark">✓</span>
+                            <div>
+                                <span>PROTEÇÃO DE CHAMADAS</span>
+                                <strong>Bloqueador de Chamadas</strong>
+                            </div>
+                            <span class="blocker-menu">•••</span>
+                        </div>
+                        <div class="blocker-protection">
+                            <div>
+                                <span>Proteção de chamadas</span>
+                                <strong>Controle de bloqueio</strong>
+                            </div>
+                            <span class="blocker-switch" aria-hidden="true"><span></span></span>
+                        </div>
+                        <div class="blocker-rule">
+                            <span class="blocker-rule-icon">◎</span>
+                            <div>
+                                <strong>Números fora dos contatos</strong>
+                                <span>Chamadas bloqueadas</span>
+                            </div>
+                        </div>
+                        <div class="blocker-notice">
+                            <span class="blocker-notice-icon">↘</span>
+                            <div>
+                                <strong>Avisos de chamadas</strong>
+                                <span>Notificações quando uma chamada é bloqueada</span>
+                            </div>
+                        </div>
+                        <div class="blocker-footer">Seu telefone. Suas regras.</div>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -152,6 +211,32 @@
                 <div class="feature-icon">◉</div>
                 <h3>Player moderno</h3>
                 <p>Interface elegante, simples e agradável para controlar sua música.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="blocker-details" class="blocker-details">
+        <div class="section-title reveal">
+            <span>CHAMADAS / PRIVACIDADE</span>
+            <h2>Mais tranquilidade<br>no seu dia.</h2>
+            <p>O Bloqueador de Chamadas filtra números que não estão salvos nos contatos do seu aparelho.</p>
+        </div>
+
+        <div class="feature-grid blocker-feature-grid">
+            <article class="feature-card reveal">
+                <div class="feature-icon">⊘</div>
+                <h3>Filtro de chamadas</h3>
+                <p>Chamadas de números fora dos seus contatos são bloqueadas automaticamente quando a proteção está ativa.</p>
+            </article>
+            <article class="feature-card reveal">
+                <div class="feature-icon">◉</div>
+                <h3>Você no controle</h3>
+                <p>Ative ou desative o bloqueio pelo controle principal do aplicativo.</p>
+            </article>
+            <article class="feature-card reveal">
+                <div class="feature-icon">♧</div>
+                <h3>Avisos de bloqueio</h3>
+                <p>Receba notificações locais quando uma chamada for bloqueada.</p>
             </article>
         </div>
     </section>
@@ -203,17 +288,20 @@
     <section id="download" class="download-section">
         <div class="download-box reveal">
             <div class="download-glow"></div>
-            <span class="download-label">MUSIC PLAYER</span>
-            <h2>Pronto para<br><strong>ouvir?</strong></h2>
-            <p>Baixe gratuitamente o Music Player para Android e leve suas músicas com você.</p>
+            <span class="download-label">APLICATIVOS PARA ANDROID</span>
+            <h2>Escolha seu<br><strong>aplicativo.</strong></h2>
+            <p>Music Player e Bloqueador de Chamadas para Android. Baixe os apps direto para o seu dispositivo.</p>
 
-            <a href="apk/app-debug.apk"
-               class="download-main"
-               id="downloadButton"
-               download>
-                <span>↓</span>
-                Baixar APK
-            </a>
+            <div class="download-options">
+                <a href="apk/player.apk" class="download-main" id="downloadButton" download>
+                    <span>↓</span>
+                    Baixar Music Player
+                </a>
+                <a href="apk/bloqueador.apk" class="download-main blocker-download" download>
+                    <span>↓</span>
+                    Baixar Bloqueador de Chamadas
+                </a>
+            </div>
 
             <small>Download direto • Android</small>
 
@@ -236,7 +324,7 @@
                 <div class="developer-avatar">👨‍💻</div>
                 <div class="developer-info">
                     <h3>Diego de Jesus</h3>
-                    <p>Estudante, criador e mantenedor do Music Player.<br>
+                    <p>Estudante, criador e mantenedor do Music Player e do Bloqueador de Chamadas.<br>
                     Formado em Análise e Desenvolvimento de Sistemas.</p>
                 </div>
             </div>
@@ -259,10 +347,10 @@
 <footer>
     <div class="logo">
         <span class="logo-icon">♫</span>
-        Music Player
+        Music Player e Bloqueador de Chamadas
     </div>
-    <p>Seu som. Seu ritmo.</p>
-    <span class="copyright">© 2026 Music Player</span>
+    <p>Music Player e Bloqueador de Chamadas para Android.</p>
+    <span class="copyright">© 2026</span>
 </footer>
 
 <!-- Toast para cópia -->
@@ -288,7 +376,12 @@
             const target = document.querySelector(targetId);
             if (target) {
                 e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const appPickerLink = this.closest('.app-picker');
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: appPickerLink ? 'nearest' : 'start',
+                    inline: appPickerLink ? 'start' : 'nearest'
+                });
             }
         });
     });
